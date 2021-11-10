@@ -34,6 +34,26 @@ function Nav() {
               Login
             </Link>
           </li>
+          <li className="mx-1">
+            <Link to="/about">
+              About
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/pricing">
+              Pricing
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/gallery">
+              Gallery 
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/appointments">
+              Appointments
+            </Link>
+          </li>
         </ul>
       );
     }
@@ -43,8 +63,8 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          <span role="img" aria-label="shopping bag">💈</span>
+          SalonMe✂️
         </Link>
       </h1>
 
