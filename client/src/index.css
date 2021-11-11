@@ -1,9 +1,9 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
-  --dark: #272f32;
+  --primary: #0B0C10;
+  --secondary: #66FCF1;
+  --tertiary: #1F2833;
+  --light: #C5C6C7;
+  --dark: #1F2833;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -11,11 +11,16 @@
 
 * {
   box-sizing: border-box;
+  background-color: var(--primary);
 }
 
 html,
 body {
   min-height: 100%;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
@@ -25,7 +30,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  color: var(--light);
 }
 
 h1,
@@ -38,6 +43,29 @@ h6 {
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 120px;
+  
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+.nav {
+  margin: auto;
+  padding: 5px;
+}
+
+.category-menu button {
+  margin: 7px;
+  padding: 10px;
+  padding-left: 19px;
+  padding-right: 19px;
 }
 
 h1 {
@@ -70,7 +98,7 @@ p {
 }
 
 a {
-  color: var(--tertiary);
+  color: var(--secondary);
   text-decoration: none;
   font-weight: bold;
 }

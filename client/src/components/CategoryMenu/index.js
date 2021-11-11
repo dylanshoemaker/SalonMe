@@ -39,7 +39,7 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
+    <div className="category-menu">
       <h2>--</h2>
       {categories.map(item => (
         <button

@@ -72,7 +72,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
-      <div className="close" onClick={toggleCart}>[close]</div>
+      <div className="close" onClick={toggleCart}>Close X</div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
         <div>
@@ -89,7 +89,7 @@ const Cart = () => {
                   Checkout
               </button>
                 :
-                <span>(log in to check out)</span>
+                <span>Log in to check out</span>
             }
           </div>
         </div>
