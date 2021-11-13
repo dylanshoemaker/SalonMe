@@ -58,7 +58,7 @@ db.once('open', async () => {
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
       image: 'mens1.jpg',
-      price: 3.99,
+      price: 19.00,
       quantity: 50
     },
     {
@@ -67,7 +67,7 @@ db.once('open', async () => {
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
       image: 'mens2.jpg',
-      price: 3.99,
+      price: 17.99,
       quantity: 50
     },
     {
@@ -76,7 +76,7 @@ db.once('open', async () => {
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
       image: 'mens3.jpg',
-      price: 14.99,
+      price: 15.99,
       quantity: 100
     },
     {
@@ -85,7 +85,7 @@ db.once('open', async () => {
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
       image: 'mens4.jpg',
-      price: 14.99,
+      price: 17.99,
       quantity: 100
     },
     {
@@ -94,7 +94,7 @@ db.once('open', async () => {
       description:
         'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
       image: 'mens5.jpg',
-      price: 14.99,
+      price: 26.99,
       quantity: 100
     },
     {
@@ -103,16 +103,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo1.jpg',
-      price: 399.99,
-      quantity: 30
-    },
-    {
-      name: 'Biolage Hydra Source',
-      category: categories[3]._id,
-      description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'shampoo2.jpg',
-      price: 399.99,
+      price: 16.99,
       quantity: 30
     },
     {
@@ -130,7 +121,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo3.jpg',
-      price: 399.99,
+      price: 20.00,
       quantity: 30
     },
     {
@@ -139,7 +130,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo4.jpg',
-      price: 399.99,
+      price: 39.99,
       quantity: 30
     },
     {
@@ -148,7 +139,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo5.jpg',
-      price: 399.99,
+      price: 20.00,
       quantity: 30
     },
     {
@@ -157,7 +148,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tool1.jpg',
-      price: 399.99,
+      price: 99.99,
       quantity: 30
     },
     {
@@ -166,7 +157,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tool2.jpg',
-      price: 399.99,
+      price: 118.99,
       quantity: 30
     },
     {
@@ -175,16 +166,16 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tool3.jpg',
-      price: 399.99,
+      price: 39.99,
       quantity: 30
     },
     {
-      name: 'Flat Iron',
+      name: 'BaBylissPRO NANO Titanium',
       category: categories[4]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tool4.jpg',
-      price: 399.99,
+      price: 119.99,
       quantity: 30
     },
     {
@@ -193,7 +184,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tool5.jpg',
-      price: 399.99,
+      price: 99.99,
       quantity: 30
     },
   ]);
