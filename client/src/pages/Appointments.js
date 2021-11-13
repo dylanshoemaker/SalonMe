@@ -1,9 +1,18 @@
-import React from "react";
-import { Dayjs } from 'dayjs';
-import dayjsGenerateConfig from 'rc-picker/lib/generate/dayjs';
-import generateCalendar from 'antd/es/appointments/generateCalendar';
-import 'antd/es/appointments/style';
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
-const Appointments = generateCalendar<Dayjs>(dayjsGenerateConfig);
+function Appointments() {
+    const [value, onChange] = useState(new Date());
+  
+    return (
+      <div>
+        <Calendar          
+          onChange={onChange}
+          value={value}
+        />
+      </div>
+    );
+  }
 
 export default Appointments;
