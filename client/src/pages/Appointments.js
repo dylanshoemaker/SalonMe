@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import React from 'react';
+import { Calendar, momentLocalizer } from 'react-big-calendar'
+import moment from 'moment'
+ 
+const localizer = momentLocalizer(moment)
 
-function Appointments() {
-    const [value, onChange] = useState(new Date());
-  
-    return (
-      <div>
-        <Calendar          
-          onChange={onChange}
-          value={value}
-        />
-      </div>
-    );
-  }
+const myEventsList = ["hello", "birthday"];
+ 
+const MyCalendar = props => (
+  <div>
+    <Calendar
+      localizer={localizer}
+      events={myEventsList}
+      startAccessor="start"
+      endAccessor="end"
+    />
+  </div>
+)
 
-export default Appointments;
+export default MyCalendar;
