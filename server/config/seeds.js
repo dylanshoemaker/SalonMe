@@ -8,8 +8,7 @@ db.once('open', async () => {
     { name: 'Skin Care' },
     { name: "Men's" },
     { name: 'Hair Care' },
-    { name: 'Tools' },
-    { name: 'Color' }
+    { name: 'Tools' }
   ]);
 
   console.log('categories seeded');
@@ -54,6 +53,15 @@ db.once('open', async () => {
       quantity: 20
     },
     {
+      name: 'American Crew Conditioner',
+      category: categories[1]._id,
+      description:
+        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
+      image: 'mens1.jpg',
+      price: 3.99,
+      quantity: 50
+    },
+    {
       name: 'Mitch Styling Cream',
       category: categories[1]._id,
       description:
@@ -90,67 +98,104 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: '',
-      category: categories[2]._id,
+      name: 'Biolage Color Last',
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: '',
+      image: 'shampoo1.jpg',
       price: 399.99,
       quantity: 30
     },
     {
-      name: '',
-      category: categories[2]._id,
+      name: 'Biolage Hydra Source',
+      category: categories[3]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: '',
-      price: 199.99,
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'shampoo2.jpg',
+      price: 399.99,
       quantity: 30
     },
     {
-      name: '',
+      name: 'Biolage Hydra Source',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: '',
-      price: 9.99,
-      quantity: 100
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'shampoo2.jpg',
+      price: 399.99,
+      quantity: 30
     },
     {
-      name: '',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: '',
-      price: 1.99,
-      quantity: 1000
+      name: 'Joico K-PAK',
+      category: categories[3]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'shampoo3.jpg',
+      price: 399.99,
+      quantity: 30
     },
     {
-      name: '',
+      name: 'Pureology Shampoo & Conditioner',
+      category: categories[3]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'shampoo4.jpg',
+      price: 399.99,
+      quantity: 30
+    },
+    {
+      name: 'Joico Color Endure',
+      category: categories[3]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'shampoo5.jpg',
+      price: 399.99,
+      quantity: 30
+    },
+    {
+      name: 'BaBylissPRO Dryer & Flat Iron',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: '',
-      price: 2.99,
-      quantity: 1000
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'tool1.jpg',
+      price: 399.99,
+      quantity: 30
     },
     {
-      name: '',
+      name: 'BaBylissPRO Rapido Dryer',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: '',
-      price: 7.99,
-      quantity: 100
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'tool2.jpg',
+      price: 399.99,
+      quantity: 30
     },
     {
-      name: '',
+      name: 'Hot Tools Hair Curler',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: '',
-      price: 9.99,
-      quantity: 600
-    }
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'tool3.jpg',
+      price: 399.99,
+      quantity: 30
+    },
+    {
+      name: 'Flat Iron',
+      category: categories[4]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'tool4.jpg',
+      price: 399.99,
+      quantity: 30
+    },
+    {
+      name: 'Absolute Gamma+Hitter Trimmer',
+      category: categories[4]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'tool5.jpg',
+      price: 399.99,
+      quantity: 30
+    },
   ]);
 
   console.log('products seeded');
