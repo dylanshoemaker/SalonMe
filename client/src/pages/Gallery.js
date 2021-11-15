@@ -3,9 +3,9 @@ import React from "react";
 
 const Gallery = () => {
     return (
-      <div className="container">
+      <div className="container gallery">
         
-        <h2>GALLERY</h2>
+        <h2 className="gallery-title">Check out some of the work we've done!</h2>
         
         <img src="/images/color-image1.jpg" alt="red color" width="500" height="600"></img>
         <img src="/images/color-image2.jpg" alt="red color 2" width="500" height="600" ></img>

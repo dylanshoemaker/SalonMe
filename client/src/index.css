@@ -104,11 +104,15 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--secondary)
 }
 
 header {
   background: var(--primary);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 header a {
@@ -141,7 +145,7 @@ img {
 }
 
 span[role="img"] {
-  cursor: default;
+  cursor: pointer;
 }
 
 form {
@@ -229,6 +233,20 @@ input:focus {
 
 .error-text {
   color: var(--error);
+}
+
+/* Gallery page styles */
+
+.gallery {
+  text-align: center;
+}
+
+.gallery img {
+  margin: 30px;
+}
+
+.gallery-title {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
