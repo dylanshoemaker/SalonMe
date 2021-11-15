@@ -57,6 +57,8 @@ header h1 {
 }
 
 .nav {
+  text-align: center;
+  align-items: center;
   margin: auto;
   padding: 5px;
 }

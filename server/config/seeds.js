@@ -47,7 +47,7 @@ db.once('open', async () => {
       name: 'Soap Bar',
       category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+        'A bar of soap',
       image: 'soap.jpg',
       price: 149.99,
       quantity: 20

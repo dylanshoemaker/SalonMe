@@ -25,18 +25,13 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/pricing">
-              Pricing
+            <Link to="/appointments">
+              Appointments
             </Link>
           </li>
           <li className="mx-1">
             <Link to="/gallery">
               Gallery 
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/appointments">
-              Appointments
             </Link>
           </li>
         </ul>
@@ -60,18 +55,13 @@ function Nav() {
             </Link>
           </li>
           <li className="mx-1">
-            <Link to="/pricing">
-              Pricing
+            <Link to="/appointments">
+              Appointments
             </Link>
           </li>
           <li className="mx-1">
             <Link to="/gallery">
               Gallery 
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/appointments">
-              Appointments
             </Link>
           </li>
         </ul>
