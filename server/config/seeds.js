@@ -58,7 +58,7 @@ db.once('open', async () => {
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
       image: 'mens1.jpg',
-      price: 19.00,
+      price: 19.99,
       quantity: 50
     },
     {
@@ -121,7 +121,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo3.jpg',
-      price: 20.00,
+      price: 20.99,
       quantity: 30
     },
     {
@@ -139,7 +139,7 @@ db.once('open', async () => {
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo5.jpg',
-      price: 20.00,
+      price: 20.99,
       quantity: 30
     },
     {
@@ -186,7 +186,7 @@ db.once('open', async () => {
       image: 'tool5.jpg',
       price: 99.99,
       quantity: 30
-    },
+    }
   ]);
 
   console.log('products seeded');
@@ -200,7 +200,7 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
+        products: [products[4]._id, products[3]._id, products[2]._id]
       }
     ]
   });
