@@ -17,6 +17,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Appointments from "./pages/Appointments";
 
+
 const client = new ApolloClient({
   request: (operation) => {
     const token = localStorage.getItem('id_token')
