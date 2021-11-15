@@ -61,6 +61,10 @@ header h1 {
   padding: 5px;
 }
 
+.category-menu {
+  text-align: center;
+}
+
 .category-menu button {
   margin: 7px;
   padding: 10px;
