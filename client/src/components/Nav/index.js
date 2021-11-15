@@ -81,16 +81,18 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">💈</span>
-          SalonMe✂️
-        </Link>
-      </h1>
-
-      <nav>
+      <div className="header">
+        <h1>
+          <Link to="/">
+            SalonMe
+          </Link>
+        </h1>
+      </div>
+      <div className="nav">
+        <nav>
         {showNavigation()}
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
