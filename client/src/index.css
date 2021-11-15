@@ -112,6 +112,14 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 500;
+}
+
+.cart-closed {
+  z-index: 9999;
+}
+
+.cart {
   z-index: 9999;
 }
 
