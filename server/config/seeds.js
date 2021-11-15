@@ -57,7 +57,7 @@ db.once('open', async () => {
       category: categories[1]._id,
       description:
         'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'mens1.jpg',
+      image: 'men1.jpg',
       price: 19.99,
       quantity: 50
     },
@@ -99,7 +99,7 @@ db.once('open', async () => {
     },
     {
       name: 'Biolage Color Last',
-      category: categories[3]._id,
+      category: categories[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo1.jpg',
@@ -108,7 +108,7 @@ db.once('open', async () => {
     },
     {
       name: 'Biolage Hydra Source',
-      category: categories[3]._id,
+      category: categories[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo2.jpg',
@@ -117,7 +117,7 @@ db.once('open', async () => {
     },
     {
       name: 'Joico K-PAK',
-      category: categories[3]._id,
+      category: categories[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo3.jpg',
@@ -126,7 +126,7 @@ db.once('open', async () => {
     },
     {
       name: 'Pureology Shampoo & Conditioner',
-      category: categories[3]._id,
+      category: categories[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo4.jpg',
@@ -135,7 +135,7 @@ db.once('open', async () => {
     },
     {
       name: 'Joico Color Endure',
-      category: categories[3]._id,
+      category: categories[2]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'shampoo5.jpg',
@@ -144,46 +144,46 @@ db.once('open', async () => {
     },
     {
       name: 'BaBylissPRO Dryer & Flat Iron',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'tool1.jpg',
+      image: 'tools1.jpg',
       price: 99.99,
       quantity: 30
     },
     {
       name: 'BaBylissPRO Rapido Dryer',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'tool2.jpg',
+      image: 'tools2.jpg',
       price: 118.99,
       quantity: 30
     },
     {
       name: 'Hot Tools Hair Curler',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'tool3.jpg',
+      image: 'tools3.jpg',
       price: 39.99,
       quantity: 30
     },
     {
       name: 'BaBylissPRO NANO Titanium',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'tool4.jpg',
+      image: 'tools4.jpg',
       price: 119.99,
       quantity: 30
     },
     {
       name: 'Absolute Gamma+Hitter Trimmer',
-      category: categories[4]._id,
+      category: categories[3]._id,
       description:
         'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'tool5.jpg',
+      image: 'tools5.jpg',
       price: 99.99,
       quantity: 30
     }
