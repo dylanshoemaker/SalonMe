@@ -3,7 +3,7 @@ import React from "react";
 
 const Pricing = () => {
     return (
-      <div className="container">
+      <div className="container pricing">
         
         <h2>Cuts</h2>
         <ul>
