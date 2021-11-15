@@ -15,11 +15,11 @@ const myEventsList = [
 
 function MyCalendar() {
     const [newEvent, setNewEvent] = useState({title: "", start: "", end: ""})
-    const [allEvents, setAllEvents] = useState(myEventsList)
+    // const [allEvents, setAllEvents] = useState(myEventsList)
 
-    function handleAddEvent() {
-        setAllEvents([...allEvents, newEvent])
-    }
+    // function handleAddEvent() {
+    //     setAllEvents([...allEvents, newEvent])
+    // }
 
     return (
     <div>
