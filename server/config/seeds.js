@@ -20,7 +20,7 @@ db.once('open', async () => {
     {
       name: 'Hempz Vanilla Plum',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        'Vanilla Plum lotion, powered by 100% pure hemp seed oil. 17 ounces in a pump bottle',
       image: 'lotion1.jpg',
       category: categories[0]._id,
       price: 20.99,
@@ -29,17 +29,17 @@ db.once('open', async () => {
     {
       name: 'Hempz Pomegranate',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+        'Moisturize skin and help prevent environmental damage with our antioxidant-rich pomegranate-powered lotion',
       image: 'lotion2.jpg',
       category: categories[0]._id,
       price: 20.99,
       quantity: 500
     },
     {
-      name: 'Kenra',
+      name: 'Kenra Brightening Shampoo',
       category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+        'Blondes, grays, and brunettes require toning to eliminate brassiness. Kenra Brightening Shampoo contains violet pigment for instant toning. Designed for daily use on natural or color-treated hair, this violet toning shampoo maintains radiant color while providing increased manageability and intense shine for healthy looking hair',
       image: 'lotion3.jpg',
       price: 14.99,
       quantity: 20
@@ -48,9 +48,9 @@ db.once('open', async () => {
       name: 'Soap Bar',
       category: categories[0]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
+        'A bar of soap',
       image: 'soap.jpg',
-      price: 14.99,
+      price: 149.99,
       quantity: 20
     },
     {
