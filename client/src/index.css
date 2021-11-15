@@ -111,6 +111,7 @@ a {
   color: var(--secondary);
   text-decoration: none;
   font-weight: bold;
+  transition: all ease-in-out 0.25s;
 }
 
 a:hover {
