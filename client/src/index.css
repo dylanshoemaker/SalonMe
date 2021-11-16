@@ -283,15 +283,23 @@ input:focus {
   }
 }
 
-.rbc-today {
-  background-color: #66FCF1 !important;
-}
-
 .rbc-off-range-bg {
   background-color: #1F2833 !important;
 }
 
 .appointment-scheduler {
-  display: flex;
+  display: flex; 
   
+}
+
+select {
+  color: white;
+}
+
+.rbc-calendar, .rbc-row, .rbc-month-row, .rbc-row-bg, .rbc-row-content, .rbc-day-bg, .rbc-month-view, .rbc-date-cell, .rbc-row-segment {
+  background-color: transparent;
+}
+
+.rbc-today {
+  background-color: #66FCF1 !important;
 }
