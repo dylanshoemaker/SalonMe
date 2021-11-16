@@ -29,7 +29,7 @@ function MyCalendar() {
     setAllEvents([...allEvents, newEvent])
   }
 
-  console.log(newEvent)  
+  console.log(newEvent.start)    
 
   return (
     <div >
@@ -71,13 +71,13 @@ function MyCalendar() {
           onChange={(start) => setNewEvent({ ...newEvent, start })}
           value={newEvent.start}
         />
-        <DateTimePicker
+        {/* <DateTimePicker
           placeholderText="End Date"
           style={{ marginRight: "10px" }}
           selected={newEvent.end}
           onChange={(end) => setNewEvent({ ...newEvent, end })}
           value={newEvent.end}          
-        />
+        /> */}
         <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Schedule
         </button>
@@ -114,12 +114,12 @@ function MyCalendar() {
         localizer={localizer}
         events={allEvents}
         startAccessor="start"
-        endAccessor="end"
+        endAccessor={(newEvent) => { return moment(newEvent.start).add(1, 'h') }}
         style={{ height: 500, margin: "50px" }}
         defaultView="week" 
       />
     </div>
-  )
+  )  
 }
 
 
