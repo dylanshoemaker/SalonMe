@@ -1,4 +1,4 @@
-let db, tx, store;
+let db;
 
 const request = window.indexedDB.open('SalonMe', 1);
 
