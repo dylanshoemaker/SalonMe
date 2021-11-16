@@ -5,14 +5,13 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import DateTimePicker from 'react-datetime-picker';
 import "react-datetime-picker/dist/DateTimePicker.css";
 
-
 const localizer = momentLocalizer(moment)
 
 const myEventsList = [
     {
         title: "Haircut",
-        start: new Date(2021, 10, 15),
-        end: new Date(2021, 10, 15)
+        start: new Date(2021, 10, 15, 9, 0, 0),
+        end: new Date(2021, 10, 15, 9, 0, 0)
     }
 ];
 
@@ -22,20 +21,13 @@ function MyCalendar() {
 
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
-  }
-
-  const end = moment(newEvent.start).add(1, 'h') 
-
-  console.log(newEvent.start)
-  console.log(end)
+  }  
 
   return (
     <div >
       <h2 className="appointment-scheduler">Schedule an Appointment</h2>
       <div className="appointment-scheduler">
-        {/* <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
-          value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-        /> */}
+        
         <form action="/action_page.php">
           <label for="salon">Choose a service:</label>
           <div>
@@ -76,44 +68,11 @@ function MyCalendar() {
           value={newEvent.start}
           className="date-time-picker"
         />
-        {/* <DateTimePicker
-          placeholderText="End Date"
-          style={{ marginRight: "10px" }}
-          selected={newEvent.end}
-          onChange={(end) => setNewEvent({ ...newEvent, end })}
-          value={newEvent.end}          
-        /> */}
+        
         <button className="schedule-btn" style={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Schedule
         </button>
       </div>
-
-      {/* <h2>Cuts</h2>
-      <ul>
-        <a><li>Men's $20</li></a>
-        <li>Women's Short $30</li>
-        <li>Women's Long $35</li>
-        <li>Blow Out $25</li>
-        <li>Kids $20</li>
-      </ul>
-
-      <h2>Colors</h2>
-      <ul>
-        <li>Partial Highlight $70</li>
-        <li>Root Re-Touch $70</li>
-        <li>All Over From $80 and Up</li>
-        <li>Balyage from $100 and Up</li>
-        <li>Highlights $120</li>
-        <li>Additional Color $10 Each</li>
-        <li>Color Correction Starts at $100</li>
-      </ul>
-
-      <h2>Facial Wax</h2>
-      <ul>
-        <li>EyeBrows $12</li>
-        <li>Lip $12</li>
-      </ul> */}
-
 
       <Calendar
         localizer={localizer}
@@ -130,6 +89,5 @@ function MyCalendar() {
     </div>
   )
 }
-
 
 export default MyCalendar;
