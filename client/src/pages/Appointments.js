@@ -21,7 +21,7 @@ const myEventsList = [
   }
 ];
 
-function MyCalendar() {  
+function MyCalendar() {
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
@@ -29,21 +29,47 @@ function MyCalendar() {
     setAllEvents([...allEvents, newEvent])
   }
 
-  console.log(newEvent)
+  console.log(newEvent)  
 
   return (
     <div>
-      <h2>Add New Event</h2>
+      <h2>Schedule an Appointment</h2>
       <div>
-        <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
+        {/* <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
           value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-        />
+        /> */}
+        <form action="/action_page.php">
+          <label for="salon">Choose a service:</label>
+          <select style={{color: 'white'}} defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <option value="">Cuts</option>
+            <option value="Men's">Men's $20</option>
+            <option value="Women's Short">Women's Short $30</option>
+            <option value="Women's Long">Women's Long $35</option>
+            <option value="Blow Out">Blow Out $25</option>
+            <option value="Kids">Kids $20</option>
+          </select>   
+          <select style={{color: 'white'}} defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <option value="">Colors</option>
+            <option value="Partial Highlight">Partial Highlight $70</option>
+            <option value="Root Re-Touch">Root Re-Touch $70</option>
+            <option value="All Over">All Over From $80 and Up</option>
+            <option value="Balyage">Balyage from $100 and Up</option>
+            <option value="Highlights">Highlights $120</option>
+            <option value="Additional Color">Additional Color $10 Each</option>
+            <option value="Color Correction">Color Correction Starts at $100</option>
+          </select> 
+          <select style={{color: 'white'}} defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <option value="">Facial Wax</option>
+            <option value="EyeBrows">EyeBrows $12</option>
+            <option value="Lip">Lip $12</option>            
+          </select>        
+        </form>
         <DateTimePicker
           placeholderText="Start Date"
           style={{ marginRight: "10px" }}
           selected={newEvent.start}
           onChange={(start) => setNewEvent({ ...newEvent, start })}
-          value={newEvent.start}          
+          value={newEvent.start}
         />
         <DateTimePicker
           placeholderText="End Date"
@@ -53,11 +79,11 @@ function MyCalendar() {
           value={newEvent.end}
         />
         <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
-          Add Event
+          Schedule
         </button>
       </div>
 
-      <h2>Cuts</h2>
+      {/* <h2>Cuts</h2>
       <ul>
         <a><li>Men's $20</li></a>
         <li>Women's Short $30</li>
@@ -81,7 +107,7 @@ function MyCalendar() {
       <ul>
         <li>EyeBrows $12</li>
         <li>Lip $12</li>
-      </ul>
+      </ul> */}
 
 
       <Calendar
