@@ -27,48 +27,54 @@ function MyCalendar() {
 
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
-  }    
+  }
 
   return (
     <div >
-      <h2 className= "appointment-scheduler">Schedule an Appointment</h2>
-      <div className= "appointment-scheduler">
+      <h2 className="appointment-scheduler">Schedule an Appointment</h2>
+      <div className="appointment-scheduler">
         {/* <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
           value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         /> */}
         <form action="/action_page.php">
           <label for="salon">Choose a service:</label>
-          <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
-            <option value="">Cuts</option>
-            <option value="Men's">Men's $20</option>
-            <option value="Women's Short">Women's Short $30</option>
-            <option value="Women's Long">Women's Long $35</option>
-            <option value="Blow Out">Blow Out $25</option>
-            <option value="Kids">Kids $20</option>
-          </select>   
-          <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
-            <option value="">Colors</option>
-            <option value="Partial Highlight">Partial Highlight $70</option>
-            <option value="Root Re-Touch">Root Re-Touch $70</option>
-            <option value="All Over">All Over From $80 and Up</option>
-            <option value="Balyage">Balyage from $100 and Up</option>
-            <option value="Highlights">Highlights $120</option>
-            <option value="Additional Color">Additional Color $10 Each</option>
-            <option value="Color Correction">Color Correction Starts at $100</option>
-          </select> 
-          <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
-            <option value="">Facial Wax</option>
-            <option value="EyeBrows">EyeBrows $12</option>
-            <option value="Lip">Lip $12</option>            
-          </select>        
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Cuts</option>
+              <option value="Men's">Men's $20</option>
+              <option value="Women's Short">Women's Short $30</option>
+              <option value="Women's Long">Women's Long $35</option>
+              <option value="Blow Out">Blow Out $25</option>
+              <option value="Kids">Kids $20</option>
+            </select>
+          </div>
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Colors</option>
+              <option value="Partial Highlight">Partial Highlight $70</option>
+              <option value="Root Re-Touch">Root Re-Touch $70</option>
+              <option value="All Over">All Over From $80 and Up</option>
+              <option value="Balyage">Balyage from $100 and Up</option>
+              <option value="Highlights">Highlights $120</option>
+              <option value="Additional Color">Additional Color $10 Each</option>
+              <option value="Color Correction">Color Correction Starts at $100</option>
+            </select>
+          </div>
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Facial Wax</option>
+              <option value="EyeBrows">EyeBrows $12</option>
+              <option value="Lip">Lip $12</option>
+            </select>
+          </div>
         </form>
         <DateTimePicker
           placeholderText="Start Date"
           style={{ marginRight: "10px" }}
           selected={newEvent.start}
           onChange={(start) => setNewEvent({ ...newEvent, start })}
-          value={newEvent.start}  
-          className="date-time-picker"        
+          value={newEvent.start}
+          className="date-time-picker"
         />
         {/* <DateTimePicker
           placeholderText="End Date"
@@ -77,7 +83,7 @@ function MyCalendar() {
           onChange={(end) => setNewEvent({ ...newEvent, end })}
           value={newEvent.end}          
         /> */}
-        <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
+        <button className="schedule-btn" style={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Schedule
         </button>
       </div>
@@ -115,11 +121,11 @@ function MyCalendar() {
         startAccessor="start"
         endAccessor={(newEvent) => { return moment(newEvent.start).add(1, 'h') }}
         style={{ height: 500, margin: "50px" }}
-        defaultView="week" 
+        defaultView="week"
         className="calendar"
       />
     </div>
-  )  
+  )
 }
 
 
