@@ -7,9 +7,9 @@ const localizer = momentLocalizer(moment)
 
 const myEventsList = [
     {
-        title: "Birthday",
-        start: new Date(2021, 11, 15),
-        end: new Date(2021, 11, 19)
+        title: "Haircut",
+        start: new Date(2021, 10, 15),
+        end: new Date(2021, 10, 15)
     }
 ];
 
@@ -17,7 +17,7 @@ function MyCalendar() {
 
     return (
       <div className="container">
-        <div className="flex-row px-2 mb-3">
+        <div className="flex-row px-2">
       <div>
         <h2>Cuts</h2>
         <ul>
