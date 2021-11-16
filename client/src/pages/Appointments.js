@@ -24,6 +24,11 @@ function MyCalendar() {
     setAllEvents([...allEvents, newEvent])
   }
 
+  const end = moment(newEvent.start).add(1, 'h') 
+
+  console.log(newEvent.start)
+  console.log(end)
+
   return (
     <div >
       <h2 className="appointment-scheduler">Schedule an Appointment</h2>
@@ -114,7 +119,10 @@ function MyCalendar() {
         localizer={localizer}
         events={allEvents}
         startAccessor="start"
-        endAccessor={(newEvent) => { return moment(newEvent.start).add(1, 'h') }}
+        endAccessor={(newEvent) => { 
+          const end = moment(newEvent.start).add(1, 'h')
+          return end._d
+         }}
         style={{ height: 500, margin: "50px" }}
         defaultView="week"
         className="calendar"
