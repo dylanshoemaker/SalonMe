@@ -9,16 +9,11 @@ import "react-datetime-picker/dist/DateTimePicker.css";
 const localizer = momentLocalizer(moment)
 
 const myEventsList = [
-  {
-    title: "Birthday",
-    start: new Date(2021, 10, 15, 11, 0, 0, 0),
-    end: new Date(2021, 10, 15, 11, 3, 0, 0)
-  },
-  {
-    title: "thanksgiving",
-    start: new Date(2021, 10, 25, 11, 0, 0, 0),
-    end: new Date(2021, 10, 25, 11, 3, 0, 0)
-  }
+    {
+        title: "Haircut",
+        start: new Date(2021, 10, 15),
+        end: new Date(2021, 10, 15)
+    }
 ];
 
 function MyCalendar() {
