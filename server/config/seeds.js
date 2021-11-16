@@ -8,7 +8,8 @@ db.once('open', async () => {
     { name: 'Skin Care' },
     { name: "Men's" },
     { name: 'Hair Care' },
-    { name: 'Tools' }
+    { name: 'Tools' },
+    { name: 'Meats' }
   ]);
 
   console.log('categories seeded');
@@ -186,7 +187,16 @@ db.once('open', async () => {
       image: 'tools5.jpg',
       price: 99.99,
       quantity: 30
-    }
+    },
+    {
+      name: 'Salami',
+      category: categories[4]._id,
+      description:
+        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+      image: 'salami.jpg',
+      price: 2.99,
+      quantity: 30
+    },
   ]);
 
   console.log('products seeded');
@@ -200,7 +210,7 @@ db.once('open', async () => {
     password: 'password12345',
     orders: [
       {
-        products: [products[4]._id, products[3]._id, products[2]._id]
+        products: [products[3]._id, products[3]._id, products[2]._id]
       }
     ]
   });

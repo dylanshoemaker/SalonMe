@@ -8,22 +8,18 @@ const appointmentSchema = new Schema({
     required: true,
     trim: true
   },
-  description: {
-    type: String
-  },
-  image: {
-    type: String
+  service: {
+      type: String
   },
   price: {
     type: Number,
     required: true,
     min: 0.99
   },
-  category: {
-    type: Schema.Types.ObjectId,
-    ref: 'Category',
-    required: true
+  appointmentTime: {
+    type: Date
   }
+  
 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);
