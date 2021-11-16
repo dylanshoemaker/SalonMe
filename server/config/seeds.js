@@ -56,7 +56,7 @@ db.once('open', async () => {
       name: 'American Crew Conditioner',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
+        'This triple action daily moisturizing conditioner restores, strengthens, and protects. Hair is left feeling soft, manageable, and ready for styling. Suitable for men with normal to dry hair',
       image: 'men1.jpg',
       price: 19.99,
       quantity: 50
