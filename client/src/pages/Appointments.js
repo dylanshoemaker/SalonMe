@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DateTimePicker from 'react-datetime-picker';
+import "react-datetime-picker/dist/DateTimePicker.css";
 
 
 const localizer = momentLocalizer(moment)
@@ -12,30 +12,24 @@ const myEventsList = [
   {
     title: "Birthday",
     start: new Date(2021, 10, 15, 11, 0, 0, 0),
-    end: new Date(2021, 10, 19, 11, 0, 0)
+    end: new Date(2021, 10, 15, 11, 3, 0, 0)
   },
   {
-    title: "Birthday",
+    title: "thanksgiving",
     start: new Date(2021, 10, 25, 11, 0, 0, 0),
-    end: new Date(2021, 10, 25, 14, 0, 0)
+    end: new Date(2021, 10, 25, 11, 3, 0, 0)
   }
 ];
 
-function MyCalendar() {
+function MyCalendar() {  
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
   function handleAddEvent() {
-    // event.preventDefault();
-
-    // try {
-      
-    // } catch (error) {
-      
-    // }
-
     setAllEvents([...allEvents, newEvent])
   }
+
+  console.log(newEvent)
 
   return (
     <div>
@@ -44,9 +38,19 @@ function MyCalendar() {
         <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
           value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         />
-        <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })}
+        <DateTimePicker
+          placeholderText="Start Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
+          value={newEvent.start}          
         />
-        <DatePicker placeholderText="End Date" style={{ marginRight: "10px" }} selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })}
+        <DateTimePicker
+          placeholderText="End Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.end}
+          onChange={(end) => setNewEvent({ ...newEvent, end })}
+          value={newEvent.end}
         />
         <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Add Event

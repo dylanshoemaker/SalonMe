@@ -18,6 +18,7 @@
     "react-big-calendar": "^0.38.1",
     "react-big-scheduler": "^0.2.7",
     "react-datepicker": "^4.3.0",
+    "react-datetime-picker": "^3.4.2",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-schedule-calendar": "^0.22.8",
