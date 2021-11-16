@@ -282,3 +282,16 @@ input:focus {
     width: 100%;
   }
 }
+
+.rbc-today {
+  background-color: #66FCF1 !important;
+}
+
+.rbc-off-range-bg {
+  background-color: #1F2833 !important;
+}
+
+.appointment-scheduler {
+  display: flex;
+  
+}

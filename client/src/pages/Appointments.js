@@ -32,9 +32,9 @@ function MyCalendar() {
   console.log(newEvent)  
 
   return (
-    <div>
-      <h2>Schedule an Appointment</h2>
-      <div>
+    <div >
+      <h2 className= "appointment-scheduler">Schedule an Appointment</h2>
+      <div className= "appointment-scheduler">
         {/* <input type="text" placeholder="add title" style={{ width: "20%", marginRight: "10px" }}
           value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
         /> */}
@@ -76,7 +76,7 @@ function MyCalendar() {
           style={{ marginRight: "10px" }}
           selected={newEvent.end}
           onChange={(end) => setNewEvent({ ...newEvent, end })}
-          value={newEvent.end}
+          value={newEvent.end}          
         />
         <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Schedule
@@ -116,6 +116,7 @@ function MyCalendar() {
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500, margin: "50px" }}
+        defaultView="week" 
       />
     </div>
   )
