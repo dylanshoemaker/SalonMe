@@ -9,11 +9,11 @@ import "react-datetime-picker/dist/DateTimePicker.css";
 const localizer = momentLocalizer(moment)
 
 const myEventsList = [
-  {
-    title: "Haircut",
-    start: new Date(2021, 10, 15),
-    end: new Date(2021, 10, 15)
-  }
+    {
+        title: "Haircut",
+        start: new Date(2021, 10, 15),
+        end: new Date(2021, 10, 15)
+    }
 ];
 
 function MyCalendar() {
@@ -24,7 +24,7 @@ function MyCalendar() {
     setAllEvents([...allEvents, newEvent])
   }
 
-  const end = moment(newEvent.start).add(1, 'h')
+  const end = moment(newEvent.start).add(1, 'h') 
 
   console.log(newEvent.start)
   console.log(end)
@@ -68,16 +68,14 @@ function MyCalendar() {
             </select>
           </div>
         </form>
-        <div>
-          <DateTimePicker
-            placeholderText="Start Date"
-            style={{ marginRight: "10px" }}
-            selected={newEvent.start}
-            onChange={(start) => setNewEvent({ ...newEvent, start })}
-            value={newEvent.start}
-            className="date-time-picker"
-          />
-        </div>
+        <DateTimePicker
+          placeholderText="Start Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
+          value={newEvent.start}
+          className="date-time-picker"
+        />
         {/* <DateTimePicker
           placeholderText="End Date"
           style={{ marginRight: "10px" }}
@@ -121,10 +119,10 @@ function MyCalendar() {
         localizer={localizer}
         events={allEvents}
         startAccessor="start"
-        endAccessor={(newEvent) => {
+        endAccessor={(newEvent) => { 
           const end = moment(newEvent.start).add(1, 'h')
           return end._d
-        }}
+         }}
         style={{ height: 500, margin: "50px" }}
         defaultView="week"
         className="calendar"
