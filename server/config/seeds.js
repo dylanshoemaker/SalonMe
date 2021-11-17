@@ -66,7 +66,7 @@ db.once('open', async () => {
       name: 'Mitch Styling Cream',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
+        'A pliable styler that lets you create everyday hairstyles with smooth, lasting control',
       image: 'mens2.jpg',
       price: 17.99,
       quantity: 50
@@ -75,7 +75,7 @@ db.once('open', async () => {
       name: 'American Crew Defining Paste',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
+        'Concentrated styling power lets you manipulate hair into any style. Made with natural extracts, this unique compound maintains touchable shape and texture. Works well for short styles and those who seek a styling product with a more natural, subtle frangrance',
       image: 'mens3.jpg',
       price: 15.99,
       quantity: 100
@@ -84,7 +84,7 @@ db.once('open', async () => {
       name: 'MVRCK by Mitch',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
+        'Soften coarse facial hair with MVRCK® Beard Oil. Ideal for dry, unruly beards, this softening oil delivers added control and shine with a blend of shea butter, sunflower seed oil and other hydrating ingredients. The lightweight formula tames all beard styles and lengths, from light stubble to full grown and everything in between. Keeps beards looking soft, shiny and healthy, and refreshes the senses with an energizing agave citrus scent',
       image: 'mens4.jpg',
       price: 17.99,
       quantity: 100
@@ -93,7 +93,7 @@ db.once('open', async () => {
       name: 'REUZEL Beard Care',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
+        'This set includes beard wash and beard serum, whatever the heck that means',
       image: 'mens5.jpg',
       price: 26.99,
       quantity: 100
@@ -102,7 +102,7 @@ db.once('open', async () => {
       name: 'Biolage Color Last',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Gently cleanses and helps maintain the color depth, tone and shine for vivid color-treated hair',
       image: 'shampoo1.jpg',
       price: 16.99,
       quantity: 30
@@ -111,7 +111,7 @@ db.once('open', async () => {
       name: 'Biolage Hydra Source',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Conditions and detangles while adding softness',
       image: 'shampoo2.jpg',
       price: 399.99,
       quantity: 30
@@ -120,7 +120,7 @@ db.once('open', async () => {
       name: 'Joico K-PAK',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Shampoo and Conditioner set for curly, wavy, textured, or straight hair, designed for color protection',
       image: 'shampoo3.jpg',
       price: 20.99,
       quantity: 30
@@ -129,7 +129,7 @@ db.once('open', async () => {
       name: 'Pureology Shampoo & Conditioner',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Dry, color treated hair stays protected, looks vibrant and feels touchably soft with sulfate-free Pureology Hydrate Shampoo and Hydrating Conditioner',
       image: 'shampoo4.jpg',
       price: 39.99,
       quantity: 30
@@ -138,7 +138,7 @@ db.once('open', async () => {
       name: 'Joico Color Endure',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'This daily conditioner seals in moisture and maintains color-treated hair, while softening and adding shine to your locks',
       image: 'shampoo5.jpg',
       price: 20.99,
       quantity: 30
@@ -147,7 +147,7 @@ db.once('open', async () => {
       name: 'BaBylissPRO Dryer & Flat Iron',
       category: categories[3]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Vestibulum risus metus,vinar venauctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
       image: 'tools1.jpg',
       price: 99.99,
       quantity: 30
@@ -156,7 +156,7 @@ db.once('open', async () => {
       name: 'BaBylissPRO Rapido Dryer',
       category: categories[3]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'BaBylissPRO Rapido 2000-watt, Italian-made brushless motor dryer creates increased air power, and dries hair up to 50% faster. The lightest high-performance dryer',
       image: 'tools2.jpg',
       price: 118.99,
       quantity: 30
@@ -165,7 +165,7 @@ db.once('open', async () => {
       name: 'Hot Tools Hair Curler',
       category: categories[3]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Hot Tools Gold Spring Curling Iron is great for adding waves, curls, or volume to any hair style. Patented pulse technology for gets hot... stays hot performance. The patented pulse technology senses heat loss and begins restoring it immediately so the iron stays hot, curl after curl',
       image: 'tools3.jpg',
       price: 39.99,
       quantity: 30
@@ -174,16 +174,16 @@ db.once('open', async () => {
       name: 'BaBylissPRO NANO Titanium',
       category: categories[3]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        "BaBylissPRO Nano Titanium 1'' Digital Straightening Iron's advanced technology and all-direction floating plates produces super shiny, silky results",
       image: 'tools4.jpg',
       price: 119.99,
       quantity: 30
     },
     {
-      name: 'Absolute Gamma+Hitter Trimmer',
+      name: 'Absolute Gamma+ Hitter Trimmer',
       category: categories[3]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'First ever fully modular Absolute Hitter trimmer with removable drop-top, Universal micro USB charger, and Black Diamond Carbon blade. Includes full Gold, Rose Gold, and Chrome body kits to create 12 different custom modifications',
       image: 'tools5.jpg',
       price: 99.99,
       quantity: 30
@@ -192,7 +192,7 @@ db.once('open', async () => {
       name: 'Salami',
       category: categories[4]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
+        'Vestibulum orci, at sagittis risus mi a leo.',
       image: 'salami.jpg',
       price: 2.99,
       quantity: 30

@@ -69,8 +69,43 @@ nav ul {
 
 }
 
+.about-title {
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--secondary);
+}
+
+.about {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.stylist-title {
+  align-items: center;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.stylist {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.stylist p {
+  width: 60%;
+  margin: auto;
+}
+
 input {
   color: var(--light);
+  background-color: var(--primary);
+}
+
+label {
+  background-color: var(--primary);
 }
 
 .category-menu {
