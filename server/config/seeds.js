@@ -48,9 +48,9 @@ db.once('open', async () => {
       name: 'Soap Bar',
       category: categories[0]._id,
       description:
-        'A bar of soap',
+        'A bar of the finest soap',
       image: 'soap.jpg',
-      price: 149.99,
+      price: 249.99,
       quantity: 20
     },
     {
@@ -192,7 +192,7 @@ db.once('open', async () => {
       name: 'Salami',
       category: categories[4]._id,
       description:
-        'Vestibulum orci, at sagittis risus mi a leo.',
+        'A lovely flower made from salami',
       image: 'salami.jpg',
       price: 2.99,
       quantity: 30
