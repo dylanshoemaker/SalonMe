@@ -11,15 +11,15 @@ const appointmentSchema = new Schema({
   service: {
       type: String
   },
-  price: {
-    type: Number,
-    required: true,
-    min: 0.99
+  appointmentDate: {
+    type: String
   },
   appointmentTime: {
-    type: Date
+    type: String
+  },
+  user_id: {
+    type: String
   }
-  
 });
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);

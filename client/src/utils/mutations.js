@@ -41,3 +41,28 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_APPOINTMENT = gql`
+mutation addAppointment(
+  $name: String!
+  $service: String!
+  $appointmentDate: String!
+  $appointmentTime: String!
+  $user_id: String!
+) {
+  addAppointment(
+    name: $name
+    service: $service
+    appointmentDate: $appointmentDate
+    appointmentTime: $appointmentTime
+    user_id: $user_id
+  ) {
+    name
+    service
+    appointmentDate
+    appointmentTime
+    user_id
+  }
+}
+
+`;

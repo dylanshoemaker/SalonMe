@@ -27,7 +27,12 @@ const userSchema = new Schema({
     minlength: 5
   },
   orders: [Order.schema],
-  // appointments: [Appointment.schema]
+  appointments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Appointment'
+    }
+  ]
 });
 
 // set up pre-save middleware to create password
