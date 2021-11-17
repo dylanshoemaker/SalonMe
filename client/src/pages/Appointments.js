@@ -1,64 +1,93 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import DateTimePicker from 'react-datetime-picker';
+import "react-datetime-picker/dist/DateTimePicker.css";
 
 const localizer = momentLocalizer(moment)
 
 const myEventsList = [
     {
         title: "Haircut",
-        start: new Date(2021, 10, 15),
-        end: new Date(2021, 10, 15)
+        start: new Date(2021, 10, 15, 9, 0, 0),
+        end: new Date(2021, 10, 15, 9, 0, 0)
     }
 ];
 
-function MyCalendar() {    
+function MyCalendar() {
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [allEvents, setAllEvents] = useState(myEventsList)
 
-    return (
-      <div className="container">
-        <div className="flex-row px-2">
-      <div>
-        <h2>Cuts</h2>
-        <ul>
-          <li>Men's $20</li>
-          <li>Women's Short $30</li>
-          <li>Women's Long $35</li>
-          <li>Blow Out $25</li>
-          <li>Kids $20</li>
-        </ul>
+  function handleAddEvent() {
+    setAllEvents([...allEvents, newEvent])
+  }  
 
-        <h2>Colors</h2>
-        <ul>
-          <li>Partial Highlight $70</li>
-          <li>Root Re-Touch $70</li>
-          <li>All Over From $80 and Up</li>
-          <li>Balyage from $100 and Up</li>
-          <li>Highlights $120</li>
-          <li>Additional Color $10 Each</li>
-          <li>Color Correction Starts at $100</li>
-        </ul>
-
-        <h2>Facial Wax</h2>
-        <ul>
-          <li>EyeBrows $12</li>
-          <li>Lip $12</li>
-        </ul>
-      </div>
-      <div>
-        <Calendar
-            localizer={localizer}
-            events={myEventsList}
-            startAccessor="start"
-            endAccessor="end"
-            style={{ height: 500, margin: "50px" }}
+  return (
+    <div >
+      <h2 className="appointment-scheduler">Schedule an Appointment</h2>
+      <div className="appointment-scheduler">
+        
+        <form action="/action_page.php">
+          <label for="salon">Choose a service:</label>
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Cuts</option>
+              <option value="Men's">Men's $20</option>
+              <option value="Women's Short">Women's Short $30</option>
+              <option value="Women's Long">Women's Long $35</option>
+              <option value="Blow Out">Blow Out $25</option>
+              <option value="Kids">Kids $20</option>
+            </select>
+          </div>
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Colors</option>
+              <option value="Partial Highlight">Partial Highlight $70</option>
+              <option value="Root Re-Touch">Root Re-Touch $70</option>
+              <option value="All Over">All Over From $80 and Up</option>
+              <option value="Balyage">Balyage from $100 and Up</option>
+              <option value="Highlights">Highlights $120</option>
+              <option value="Additional Color">Additional Color $10 Each</option>
+              <option value="Color Correction">Color Correction Starts at $100</option>
+            </select>
+          </div>
+          <div>
+            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+              <option value="">Facial Wax</option>
+              <option value="EyeBrows">EyeBrows $12</option>
+              <option value="Lip">Lip $12</option>
+            </select>
+          </div>
+        </form>
+        <DateTimePicker
+          placeholderText="Start Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
+          value={newEvent.start}
+          className="date-time-picker"
         />
-      </div> 
-    </div>
+        
+        <button className="schedule-btn" style={{ marginTop: "10px" }} onClick={handleAddEvent}>
+          Schedule
+        </button>
       </div>
-    
-    )
-}
 
+      <Calendar
+        localizer={localizer}
+        events={allEvents}
+        startAccessor="start"
+        endAccessor={(newEvent) => { 
+          const end = moment(newEvent.start).add(1, 'h')
+          return end._d
+         }}
+        style={{ height: 500, margin: "50px" }}
+        defaultView="week"
+        className="calendar"
+      />
+    </div>
+  )
+}
 
 export default MyCalendar;
