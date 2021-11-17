@@ -13,7 +13,7 @@ const staffSchema = new Schema({
     },
     expertise: {
         type: String
-    },
+    }
 });
 
 const Staff = mongoose.model('Staff', staffSchema);
