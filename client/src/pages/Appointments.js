@@ -6,8 +6,8 @@ import DateTimePicker from 'react-datetime-picker';
 import "react-datetime-picker/dist/DateTimePicker.css";
 import AppointmentList from '../components/AppointmentList';
 import { ADD_APPOINTMENT } from '../utils/mutations';
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_USER, QUERY_APPOINTMENTS } from "../utils/queries";
+// import { useQuery, useMutation } from '@apollo/client';
+// import { QUERY_USER, QUERY_APPOINTMENTS } from "../utils/queries";
 
 
 const localizer = momentLocalizer(moment);
@@ -31,16 +31,16 @@ function MyCalendar() {
   function handleAddEvent() {
     if(newEvent) {
       verifyAppointment = true;
-      // try{
-      //   addAppointment({
-      //   variables: { 
-      //     title: newEvent.title,
-      //     startTime: newEvent.start,
-      //   }
-      // })
-      // } catch (e) {
-      //   console.log(e);
-      // }
+      try{
+        ADD_APPOINTMENT({
+        variables: { 
+          title: newEvent.title,
+          startTime: newEvent.start,
+        }
+      })
+      } catch (e) {
+        console.log(e);
+      }
       
       setAllEvents([...allEvents, newEvent])
     }  
