@@ -112,13 +112,12 @@ nav ul {
   margin-top: 37px;
 }
 
-.react-calendar {
+.react-datetime-picker__calendar--open {
   z-index: 9999;
 }
 
 .react-calendar__tile {
   color: var(--light);
-  background-color: var(--light);
 }
 
 input {
@@ -350,10 +349,6 @@ input:focus {
 .login-form {
   margin: auto;
   width: 35%;
-}
-
-.signup-button {
-  text-align: center;
 }
 
 /* Backup method to make product images the same size if compression isn't working */
