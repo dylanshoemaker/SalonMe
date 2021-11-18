@@ -5,6 +5,10 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
+    appointments: async (parent, { user_id }) => {
+      const params = user_id ? { user_id } : {};
+      return await Appointment.find(params).sort({ createdAt: -1 });
+    },
     categories: async () => {
       return await Category.find();
     },

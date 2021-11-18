@@ -4,8 +4,13 @@ import moment from 'moment'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import DateTimePicker from 'react-datetime-picker';
 import "react-datetime-picker/dist/DateTimePicker.css";
+import AppointmentList from '../components/AppointmentList';
+import { ADD_APPOINTMENT } from '../utils/mutations';
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_USER, QUERY_APPOINTMENTS } from "../utils/queries";
 
-const localizer = momentLocalizer(moment)
+
+const localizer = momentLocalizer(moment);
 
 const myEventsList = [
     {
@@ -19,9 +24,28 @@ function MyCalendar() {
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
+  // const [addAppointment] = useMutation(ADD_APPOINTMENT);
+
+  let verifyAppointment = false;
+
   function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent])
-  }  
+    if(newEvent) {
+      verifyAppointment = true;
+      // try{
+      //   addAppointment({
+      //   variables: { 
+      //     title: newEvent.title,
+      //     startTime: newEvent.start,
+      //   }
+      // })
+      // } catch (e) {
+      //   console.log(e);
+      // }
+      
+      setAllEvents([...allEvents, newEvent])
+    }  
+  }
+
 
   return (
     <div >
@@ -73,7 +97,14 @@ function MyCalendar() {
           Schedule
         </button>
       </div>
-
+      <div>
+          <AppointmentList 
+            startTime={newEvent.start}
+            appointmentType={newEvent.title}
+            verifyAppointment={verifyAppointment.value}
+          />
+      </div>
+      
       <Calendar
         localizer={localizer}
         events={allEvents}
