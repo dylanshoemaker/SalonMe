@@ -117,15 +117,20 @@ function Detail() {
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+
+          <div>
+            <CommentList comments={currentProduct.comments} />
+            <CommentForm productId={currentProduct._id} />
+          </div>
         </div>
+        
+        
       ) : null}
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
       <Cart />
-      
-      <CommentList comments={currentProduct.comments} />
-      <CommentForm productId={currentProduct._id} />
+
     </>
   );
 };

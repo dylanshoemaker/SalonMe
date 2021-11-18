@@ -45,7 +45,7 @@ const CommentForm = ({ productId }) => {
                 onSubmit={handleFormSubmit}
             >
                 <textarea
-                    placeholder="Leave a comment for this product..."
+                    placeholder="Leave a review for this product..."
                     value={commentBody}
                     className="form-input col-12 col-md-9"
                     onChange={handleChange}
