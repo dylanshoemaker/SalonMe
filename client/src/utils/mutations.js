@@ -46,12 +46,8 @@ export const ADD_COMMENT = gql`
   mutation addComment($productId: ID!, $commentBody: String!) {
     addComment(productId: $productId, commentBody: $commentBody) {
       _id
-      commentCount
-      comments {
-        _id
-        commentBody
-        createdAt
-      }
+      commentBody
+      
     }
   }
 `;

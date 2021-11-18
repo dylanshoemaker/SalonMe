@@ -97,7 +97,6 @@ const resolvers = {
       return { token, user };
     },
     addOrder: async (parent, { products }, context) => {
-      console.log(context);
       if (context.user) {
         const order = new Order({ products });
 
@@ -115,7 +114,6 @@ const resolvers = {
           { $push: { comments: { commentBody } } },
           { new: true, runValidators: true }
         );
-    
         return updatedProduct;
       }
     

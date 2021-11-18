@@ -84,6 +84,7 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+
   return (
     <>
       {currentProduct && cart ? (
@@ -105,8 +106,8 @@ function Detail() {
             <button onClick={addToCart}>
               Add to Cart
             </button>
-            <button 
-              disabled={!cart.find(p => p._id === currentProduct._id)} 
+            <button
+              disabled={!cart.find(p => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
@@ -119,8 +120,8 @@ function Detail() {
           />
 
           <div>
-            <CommentList comments={currentProduct.comments} />
             <CommentForm productId={currentProduct._id} />
+            <CommentList comments={currentProduct.comments} />
           </div>
         </div>
         

@@ -12,6 +12,11 @@ export const QUERY_PRODUCTS = gql`
       category {
         _id
       }
+      comments {
+        _id
+        createdAt
+        commentBody
+      }
     }
   }
 `;
