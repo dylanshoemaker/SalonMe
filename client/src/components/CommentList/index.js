@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/react-hooks';
 import React from 'react';
 import { REMOVE_COMMENT } from '../../utils/mutations';
-import { QUERY_PRODUCTS } from '../../utils/queries';
+
 
 
 const CommentList = ({ comments, productId }) => {
