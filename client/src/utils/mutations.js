@@ -59,3 +59,21 @@ mutation addAppointment(
   }
 }
 `;
+export const ADD_COMMENT = gql`
+  mutation addComment($productId: ID!, $commentBody: String!) {
+    addComment(productId: $productId, commentBody: $commentBody) {
+      _id
+      commentBody
+      
+    }
+  }
+`;
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($productId: ID!, $commentId: ID!) {
+    removeComment(productId: $productId, commentId: $commentId) {
+      _id
+      commentBody
+    }
+  }
+`;

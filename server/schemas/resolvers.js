@@ -101,7 +101,6 @@ const resolvers = {
       return { token, user };
     },
     addOrder: async (parent, { products }, context) => {
-      console.log(context);
       if (context.user) {
         const order = new Order({ products });
 
@@ -124,9 +123,31 @@ const resolvers = {
         );
 
         return appointment;
+    },
       // }
 
       // throw new AuthenticationError('You need to be logged in!');
+    addComment: async (parent, { productId, commentBody }, context) => {
+      if (context.user) {
+        const updatedProduct = await Product.findOneAndUpdate(
+          { _id: productId },
+          { $push: { comments: { commentBody } } },
+          { new: true, runValidators: true }
+        );
+        return updatedProduct;
+      }
+    
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeComment: async (parent, { productId, commentId }, context) => {
+      if (context.user) {
+        const updatedProduct = await Product.findOneAndUpdate(
+          { _id: productId},
+          { $pull: { comments: { _id: commentId }}},
+          { new: true, runValidators: true }
+        );
+        return updatedProduct
+      }
     },
     updateUser: async (parent, args, context) => {
       if (context.user) {

@@ -13,6 +13,8 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 import spinner from '../assets/spinner.gif'
+import CommentList from '../components/CommentList';
+import CommentForm from '../components/CommentForm';
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -82,6 +84,7 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+
   return (
     <>
       {currentProduct && cart ? (
@@ -103,8 +106,8 @@ function Detail() {
             <button onClick={addToCart}>
               Add to Cart
             </button>
-            <button 
-              disabled={!cart.find(p => p._id === currentProduct._id)} 
+            <button
+              disabled={!cart.find(p => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
@@ -115,12 +118,20 @@ function Detail() {
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
           />
+
+          <div>
+            <CommentForm productId={currentProduct._id} />
+            <CommentList comments={currentProduct.comments} productId={currentProduct._id} />
+          </div>
         </div>
+        
+        
       ) : null}
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
       <Cart />
+
     </>
   );
 };
