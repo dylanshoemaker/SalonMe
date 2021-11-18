@@ -5,7 +5,7 @@ const commentSchema = new Schema(
   {
     commentBody: {
       type: String,
-      required: true,
+      preferences: {type : { preference1 : String, preference2 : String}, default : null}
       maxlength: 280
     },
     createdAt: {
@@ -21,4 +21,6 @@ const commentSchema = new Schema(
   }
 );
 
-module.exports = commentSchema;
+const Comment = mongoose.model('Comment', commentSchema);
+
+module.exports = Comment;
