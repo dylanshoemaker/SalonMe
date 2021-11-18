@@ -35,6 +35,11 @@ export const QUERY_ALL_PRODUCTS = gql`
       category {
         name
       }
+      comments {
+        _id
+        createdAt
+        commentBody
+      }
     }
   }
 `;

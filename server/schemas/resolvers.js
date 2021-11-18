@@ -108,6 +108,19 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    addComment: async (parent, { productId, commentBody }, context) => {
+      if (context.user) {
+        const updatedProduct = await Product.findOneAndUpdate(
+          { _id: productId },
+          { $push: { comments: { commentBody } } },
+          { new: true, runValidators: true }
+        );
+    
+        return updatedProduct;
+      }
+    
+      throw new AuthenticationError('You need to be logged in!');
+    },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });
