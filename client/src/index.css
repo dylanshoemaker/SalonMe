@@ -277,8 +277,7 @@ input:focus {
 .flex-row {
   display: flex;
   flex-wrap: wrap;
-  padding-inline-start: 0px;
-}
+  padding-inline-start: 0px;}
 
 .space-between {
   justify-content: space-between;
@@ -330,6 +329,30 @@ input:focus {
 
 .card {
   width: 25%;
+  text-align: center;
+}
+
+.signup {
+  align-items: center;
+  text-align: center;
+}
+
+.signup-form {
+  margin: auto;
+  width: 35%;
+}
+
+.login {
+  align-items: center;
+  text-align: center;
+}
+
+.login-form {
+  margin: auto;
+  width: 35%;
+}
+
+.signup-button {
   text-align: center;
 }
 
