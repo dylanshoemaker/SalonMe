@@ -119,6 +119,16 @@ const resolvers = {
     
       throw new AuthenticationError('You need to be logged in!');
     },
+    removeComment: async (parent, { productId, commentId }, context) => {
+      if (context.user) {
+        const updatedProduct = await Product.findOneAndUpdate(
+          { _id: productId},
+          { $pull: { comments: { _id: commentId }}},
+          { new: true, runValidators: true }
+        );
+        return updatedProduct
+      }
+    },
     updateUser: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, { new: true });

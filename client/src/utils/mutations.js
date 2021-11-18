@@ -51,3 +51,12 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($productId: ID!, $commentId: ID!) {
+    removeComment(productId: $productId, commentId: $commentId) {
+      _id
+      commentBody
+    }
+  }
+`;

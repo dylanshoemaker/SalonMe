@@ -121,7 +121,7 @@ function Detail() {
 
           <div>
             <CommentForm productId={currentProduct._id} />
-            <CommentList comments={currentProduct.comments} />
+            <CommentList comments={currentProduct.comments} productId={currentProduct._id} />
           </div>
         </div>
         

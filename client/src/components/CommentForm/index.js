@@ -20,6 +20,7 @@ const CommentForm = ({ productId }) => {
 
     const handleFormSubmit = async event => {
         event.preventDefault();
+        console.log(event);
 
         try {
             // add comment to database
