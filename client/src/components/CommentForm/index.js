@@ -1,40 +1,50 @@
-import { useMutation } from '@apollo/react-hooks';
 import React, { useState } from 'react';
+import { useMutation } from '@apollo/react-hooks';
 import { ADD_COMMENT } from '../../utils/mutations';
+import { QUERY_COMMENT } from "../../utils/queries";
 import './index.css';
 
 
-const CommentForm = ({ productId }) => {
-
-    const [commentBody, setBody] = useState('');
+const CommentForm = () => {
+    const [commentBody, setText] = useState("");
     const [characterCount, setCharacterCount] = useState(0);
-
-    const [addComment, { error }] = useMutation(ADD_COMMENT);
-
-    const handleChange = event => {
-        if (event.target.value.length <= 280) {
-            setBody(event.target.value);
-            setCharacterCount(event.target.value.length);
-        }
-    }
-
-    const handleFormSubmit = async event => {
-        event.preventDefault();
-        console.log(event);
-
+  
+    const [addComment, { error }] = useMutation(ADD_COMMENT, {
+      update(cache, { data: { addComment } }) {
         try {
-            // add comment to database
-            await addComment({
-                variables: { commentBody, productId }
-            });
-            setBody('');
-            setCharacterCount(0);
+          // could potentially not exist yet, so wrap in a try...catch
+          const { comments } = cache.readQuery({ query: QUERY_COMMENT });
+          cache.writeQuery({
+            query: QUERY_COMMENT,
+            data: { commentBody: [addComment, ...comments] },
+          });
         } catch (e) {
-            console.log(e);
+          console.error(e);
         }
-
-        
-    }
+      },
+    });
+  
+    const handleChange = (event) => {
+      if (event.target.value.length <= 280) {
+        setText(event.target.value);
+        setCharacterCount(event.target.value.length);
+      }
+    };
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        // add thought to database
+        await addComment({
+          variables: { commentBody },
+        });
+  
+        // clear form value
+        setText("");
+        setCharacterCount(0);
+      } catch (e) {
+        console.error(e);
+      }
+    };
 
     return (
         <div>

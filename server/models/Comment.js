@@ -5,7 +5,8 @@ const commentSchema = new Schema(
   {
     commentBody: {
       type: String,
-      preferences: {type : { preference1 : String, preference2 : String}, default : null},
+      required: 'You need to leave a comment!',
+      minlength: 1,
       maxlength: 280
     },
     createdAt: {
@@ -20,6 +21,8 @@ const commentSchema = new Schema(
     }
   }
 );
+
+
 
 const Comment = mongoose.model('Comment', commentSchema);
 

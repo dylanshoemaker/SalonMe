@@ -59,12 +59,17 @@ mutation addAppointment(
   }
 }
 `;
+
+// this is where the error is {look down}
 export const ADD_COMMENT = gql`
   mutation addComment($productId: ID!, $commentBody: String!) {
     addComment(productId: $productId, commentBody: $commentBody) {
-      _id
-      commentBody
-      
+      _id    
+      commentBody {
+        _id
+        commentBody
+        createdAt
+      }
     }
   }
 `;
@@ -74,6 +79,7 @@ export const REMOVE_COMMENT = gql`
     removeComment(productId: $productId, commentId: $commentId) {
       _id
       commentBody
+      createdAt
     }
   }
 `;

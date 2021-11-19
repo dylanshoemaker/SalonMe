@@ -92,3 +92,14 @@ query appointments(
   }
 }
 `;
+
+
+export const QUERY_COMMENT = gql`
+  query comments($id: ID!) {
+    comment(_id: $id) {
+      _id
+      commentBody
+      createdAt
+    }
+  }
+`;
