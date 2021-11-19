@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/react-hooks';
 import React, { useState } from 'react';
 import { ADD_COMMENT } from '../../utils/mutations';
-
+import './index.css';
 
 
 const CommentForm = ({ productId }) => {
@@ -48,7 +48,7 @@ const CommentForm = ({ productId }) => {
                 <textarea
                     placeholder="Leave a review for this product..."
                     value={commentBody}
-                    className="form-input col-12 col-md-9"
+                    className="form-input col-12 col-md-9 white"
                     onChange={handleChange}
                 ></textarea>
                 <button className="btn col-12 col-md-3" type="submit">
