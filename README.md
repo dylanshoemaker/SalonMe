@@ -13,7 +13,7 @@
 
 ## Description
 
-- Website that uses React framework that can be downloaded as a PWA that allows clients to create appointments, view salon quality products via category and buy said products with Stripe. Users can also view photos of previous work that the salon has done as well as view an about section of the individual stylists that work at the salon.
+Website that uses React framework that can be downloaded as a PWA that allows clients to create appointments, view salon quality products via category and buy said products with Stripe. Users can also view photos of previous work that the salon has done as well as view an about section of the individual stylists that work at the salon.
 
 
 ## Technologies Used
