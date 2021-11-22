@@ -8,7 +8,8 @@ import {
   UPDATE_CATEGORIES,
   UPDATE_CURRENT_CATEGORY,
   CLEAR_CART,
-  TOGGLE_CART
+  TOGGLE_CART,
+  ADD_COMMENT
 } from "./actions";
 
 export const reducer = (state, action) => {
@@ -78,6 +79,11 @@ export const reducer = (state, action) => {
       return {
         ...state,
         currentCategory: action.currentCategory
+      };
+      case ADD_COMMENT:
+      return {
+        ...state,
+        products: [...action.products],
       }
 
     default:
