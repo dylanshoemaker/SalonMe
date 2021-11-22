@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
 
+const mongoose = require('mongoose');
+const commentSchema = require('./comment');
 
 
 const { Schema } = mongoose;
@@ -31,10 +32,7 @@ const productSchema = new Schema({
     ref: 'Category',
     required: true
   },
-  comment:{
-    type: String,
-    ref: 'Comment',
-  },
+  comments: [commentSchema]
 });
 
 const Product = mongoose.model('Product', productSchema);
