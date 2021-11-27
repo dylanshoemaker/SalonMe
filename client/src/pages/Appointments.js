@@ -14,14 +14,14 @@ const localizer = momentLocalizer(moment);
 
 const myEventsList = [
     {
-        title: "Haircut",
+        service: "Haircut",
         start: new Date(2021, 10, 15, 9, 0, 0),
         end: new Date(2021, 10, 15, 9, 0, 0)
     }
 ];
 
 function MyCalendar() {
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+  const [newEvent, setNewEvent] = useState({ service: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
   const [createAppointment] = useMutation(ADD_APPOINTMENT);
@@ -36,14 +36,16 @@ function MyCalendar() {
       try{
         await createAppointment({
         variables: { 
-          title: newEvent.title,
+          service: newEvent.service,
           startTime: newEvent.start,
         }
       });
-      setAllEvents([...allEvents, newEvent]);
+      
       } catch (e) {
         console.log(e);
       }}
+      
+       setAllEvents([...allEvents, newEvent])
     }  
 
 
@@ -56,7 +58,7 @@ function MyCalendar() {
         <form action="/action_page.php">
           <label for="salon">Choose a service:</label>
           <div>
-            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
               <option value="">Cuts</option>
               <option value="Men's">Men's $20</option>
               <option value="Women's Short">Women's Short $30</option>
@@ -66,7 +68,7 @@ function MyCalendar() {
             </select>
           </div>
           <div>
-            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
               <option value="">Colors</option>
               <option value="Partial Highlight">Partial Highlight $70</option>
               <option value="Root Re-Touch">Root Re-Touch $70</option>
@@ -78,7 +80,7 @@ function MyCalendar() {
             </select>
           </div>
           <div>
-            <select defaultvalue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
+            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
               <option value="">Facial Wax</option>
               <option value="EyeBrows">EyeBrows $12</option>
               <option value="Lip">Lip $12</option>
@@ -101,7 +103,7 @@ function MyCalendar() {
       <div>
           <AppointmentList 
             startTime={newEvent.start}
-            appointmentType={newEvent.title}
+            appointmentType={newEvent.service}
             verifyAppointment={verifyAppointment.value}
           />
       </div>

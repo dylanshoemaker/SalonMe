@@ -28,6 +28,9 @@ const client = new ApolloClient({
     })
   },
   uri: '/graphql',
+  onError: (e) => {
+    console.log(e)
+ },
 })
 
 function App() {
