@@ -6,7 +6,7 @@ import DateTimePicker from 'react-datetime-picker';
 import "react-datetime-picker/dist/DateTimePicker.css";
 import AppointmentList from '../components/AppointmentList';
 import { ADD_APPOINTMENT } from '../utils/mutations';
-//import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/react-hooks';
 // import { QUERY_USER, QUERY_APPOINTMENTS } from "../utils/queries";
 
 
@@ -24,27 +24,28 @@ function MyCalendar() {
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
-  //const [createAppointment] = useMutation(ADD_APPOINTMENT);
+  const [createAppointment] = useMutation(ADD_APPOINTMENT);
 
   let verifyAppointment = false;
 
-  function handleAddEvent() {
+  const handleAddEvent = async event => {
+    event.preventDefault();
+    console.log(event);
     if(newEvent) {
       verifyAppointment = true;
       try{
-        ADD_APPOINTMENT ({
+        await createAppointment({
         variables: { 
           title: newEvent.title,
           startTime: newEvent.start,
         }
-      })
+      });
+      setAllEvents([...allEvents, newEvent]);
       } catch (e) {
         console.log(e);
-      }
-      
-      setAllEvents([...allEvents, newEvent])
+      }}
     }  
-  }
+
 
 
   return (
