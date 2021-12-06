@@ -80,11 +80,10 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_APPOINTMENTS = gql`
-query appointments($user_id: ID!) {
-  appointments(user_id: $user_id) {
-    service
+{
+  appointments {
+    title
     startTime
-    user_id
   }
 }
 `;

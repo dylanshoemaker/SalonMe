@@ -5,8 +5,11 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
-    appointments: async (parent, { user_id }) => {
-      const params = user_id ? { user_id } : {};
+    appointments: async (parent, {title }) => {
+      const params = {};
+      if (title) {
+        params.title = title;
+      }
       return await Appointment.find(params).sort({ createdAt: -1 });
     },
     categories: async () => {
@@ -121,7 +124,7 @@ const resolvers = {
           { $push: { appointment: appointment._id }},
           { new: true }
         );
-
+        console.log(appointment);
         return appointment;
     },
       // }

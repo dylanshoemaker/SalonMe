@@ -14,14 +14,15 @@ const localizer = momentLocalizer(moment);
 
 const myEventsList = [
     {
-        service: "Haircut",
+        title: "Haircut",
         start: new Date(2021, 10, 15, 9, 0, 0),
-        end: new Date(2021, 10, 15, 9, 0, 0)
+        end: new Date(2021, 10, 15, 9, 0, 0),
+        //user_id: user_id
     }
 ];
 
 function MyCalendar() {
-  const [newEvent, setNewEvent] = useState({ service: "", start: "", end: "" });
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(myEventsList)
 
   const [createAppointment] = useMutation(ADD_APPOINTMENT);
@@ -30,13 +31,12 @@ function MyCalendar() {
 
   const handleAddEvent = async event => {
     event.preventDefault();
-    console.log(event);
     if(newEvent) {
       verifyAppointment = true;
       try{
         await createAppointment({
         variables: { 
-          service: newEvent.service,
+          title: newEvent.title,
           startTime: newEvent.start,
         }
       });
@@ -44,8 +44,8 @@ function MyCalendar() {
       } catch (e) {
         console.log(e);
       }}
-      
-       setAllEvents([...allEvents, newEvent])
+      setAllEvents([...allEvents, newEvent])
+       
     }  
 
 
@@ -56,9 +56,9 @@ function MyCalendar() {
       <div className="appointment-scheduler">
         
         <form action="/action_page.php">
-          <label for="salon">Choose a service:</label>
+          <label htmlFor="salon">Choose a service:</label>
           <div>
-            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
+            <select defaultValue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
               <option value="">Cuts</option>
               <option value="Men's">Men's $20</option>
               <option value="Women's Short">Women's Short $30</option>
@@ -68,7 +68,7 @@ function MyCalendar() {
             </select>
           </div>
           <div>
-            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
+            <select defaultValue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
               <option value="">Colors</option>
               <option value="Partial Highlight">Partial Highlight $70</option>
               <option value="Root Re-Touch">Root Re-Touch $70</option>
@@ -80,7 +80,7 @@ function MyCalendar() {
             </select>
           </div>
           <div>
-            <select defaultValue={newEvent.service} onChange={(e) => setNewEvent({ ...newEvent, service: e.target.value })}>
+            <select defaultValue={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}>
               <option value="">Facial Wax</option>
               <option value="EyeBrows">EyeBrows $12</option>
               <option value="Lip">Lip $12</option>
@@ -103,8 +103,8 @@ function MyCalendar() {
       <div>
           <AppointmentList 
             startTime={newEvent.start}
-            appointmentType={newEvent.service}
-            verifyAppointment={verifyAppointment.value}
+            appointmentType={newEvent.title}
+            verifyAppointment={verifyAppointment}
           />
       </div>
       
