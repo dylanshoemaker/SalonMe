@@ -114,19 +114,23 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    addAppointment: async (parent, args, context) => {
-      // if(context.user) {
-        const appointment = await Appointment.create({ ...args});
-        console.log(context)
-
-        await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $push: { appointment: appointment._id }},
-          { new: true }
-        );
-        console.log(appointment);
-        return appointment;
+    addAppointment: async (parent, {title, startTime}, context) => {
+      const appointments = await Appointment.create({title, startTime});
+      return { title, startTime };
     },
+    // addAppointment: async (parent, args, context) => {
+    //   // if(context.user) {
+    //     const appointment = await Appointment.create({ ...args});
+    //     console.log(context)
+
+    //     await User.findByIdAndUpdate(
+    //       { _id: context.user._id },
+    //       { $push: { appointment: appointment._id }},
+    //       { new: true }
+    //     );
+    //     console.log(appointment);
+    //     return appointment;
+    // },
       // }
 
       // throw new AuthenticationError('You need to be logged in!');

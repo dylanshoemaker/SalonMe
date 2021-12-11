@@ -8,7 +8,17 @@ const appointmentSchema = new Schema({
   startTime: {
     type: String
   },
+  
+},
+{
+  toJSON: {
+    getters: true
+  }
 });
+
+
+// module.exports = mongoose.model('Appointment', appointmentSchema,'title');
+
 
 const Appointment = mongoose.model('Appointment', appointmentSchema);
 

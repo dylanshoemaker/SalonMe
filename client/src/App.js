@@ -47,9 +47,9 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
-              <Route exact path="/About" component={About} />
-              <Route exact path="/Appointments" component={Appointments} />
-              <Route exact path="/Gallery" component={Gallery} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/appointments" component={Appointments} />
+              <Route exact path="/gallery" component={Gallery} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>
