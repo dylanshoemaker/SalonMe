@@ -4,6 +4,7 @@ import MyCalendar from "../components/MyCalendar";
 const Appointments = () => {
   return (
     <div className="container">
+
       <MyCalendar />
     </div>
   );

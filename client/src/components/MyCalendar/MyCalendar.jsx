@@ -15,12 +15,12 @@ const myEventsList = [
     {
         title: "Haircut",
         start: new Date(2021, 10, 15, 9, 0, 0),
-        end: new Date(2021, 10, 15, 9, 0, 0),
+        end: new Date(2021, 10, 15, 9, 0, 0)
         //user_id: user_id
     }
 ];
 
-function MyCalendar() {
+const MyCalendar = () => {
   const [newEvent, setNewEvent] = useState([{title: "", start: "", end: "" }]);
   const [allEvents, setAllEvents] = useState(myEventsList)
 
@@ -122,6 +122,9 @@ function MyCalendar() {
           className="calendar"
           startTime={newEvent.start}
           appointmentType={newEvent.title}
+          components={{
+            event: newEvent,
+          }}
           
         />
       </div>

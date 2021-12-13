@@ -5,10 +5,11 @@ const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 const resolvers = {
   Query: {
-    appointments: async (parent, {title }) => {
+    appointments: async (parent, {title, startTime }) => {
       const params = {};
       if (title) {
         params.title = title;
+        params.startTIme = startTime;
       }
       return await Appointment.find(params).sort({ createdAt: -1 });
     },
@@ -114,24 +115,24 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    addAppointment: async (parent, {title, startTime}, context) => {
-      const appointments = await Appointment.create({title, startTime});
-      return { title, startTime };
-    },
-    // addAppointment: async (parent, args, context) => {
-    //   // if(context.user) {
-    //     const appointment = await Appointment.create({ ...args});
-    //     console.log(context)
-
-    //     await User.findByIdAndUpdate(
-    //       { _id: context.user._id },
-    //       { $push: { appointment: appointment._id }},
-    //       { new: true }
-    //     );
-    //     console.log(appointment);
-    //     return appointment;
+    // addAppointment: async (parent, {title, startTime}, context) => {
+    //   const appointments = await Appointment.create({title, startTime});
+    //   return { title, startTime };
     // },
-      // }
+    addAppointment: async (parent, args, context) => {
+      // if(context.user) {
+        const appointment = await Appointment.create({ ...args});
+        console.log(context)
+
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { appointment: appointment._id }},
+          { new: true }
+        );
+        console.log(appointment);
+        return appointment;
+    },
+      
 
       // throw new AuthenticationError('You need to be logged in!');
     addComment: async (parent, { productId, commentBody }, context) => {
