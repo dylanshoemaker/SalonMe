@@ -122,9 +122,6 @@ const MyCalendar = () => {
           className="calendar"
           startTime={newEvent.start}
           appointmentType={newEvent.title}
-          components={{
-            event: newEvent,
-          }}
           
         />
       </div>

@@ -119,12 +119,12 @@ const resolvers = {
     //   const appointments = await Appointment.create({title, startTime});
     //   return { title, startTime };
     // },
-    addAppointment: async (parent, args, context) => {
+    addAppointment: async (parent, {title, startTime}, context) => {
       // if(context.user) {
-        const appointment = await Appointment.create({ ...args});
-        console.log(context)
+        const appointment = await Appointment.create({title, startTime});
+        // console.log(context)
 
-        await User.findByIdAndUpdate(
+        await Appointment.findOneAndUpdate(
           { _id: context.user._id },
           { $push: { appointment: appointment._id }},
           { new: true }
