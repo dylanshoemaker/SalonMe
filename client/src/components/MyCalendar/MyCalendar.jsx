@@ -59,7 +59,7 @@ const MyCalendar = () => {
 
     return (
       <div >
-        <h2 className="appointment-scheduler">Schedule an Appointment</h2>
+        <h2 className="appointment-scheduler">Add appointment to our database</h2>
         <div className="appointment-scheduler">
           
           <form action="/action_page.php">
