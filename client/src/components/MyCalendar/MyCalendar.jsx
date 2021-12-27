@@ -106,7 +106,7 @@ const MyCalendar = () => {
           <button className="schedule-btn" style={{ marginTop: "10px" }} onClick={handleAddEvent}>
             Schedule
           </button>
-          <p>{error && <span className="ml-2">Something went wrong...</span>}</p>
+          <p>{error && <span className="ml-2">Please log in or create an account</span>}</p>
         </div>
         
         <Calendar
