@@ -7,7 +7,7 @@ import "react-datetime-picker/dist/DateTimePicker.css";
 import { ADD_APPOINTMENT } from '../../utils/mutations';
 import { useMutation } from '@apollo/react-hooks';
 // import { QUERY_APPOINTMENTS } from "../utils/queries";
-
+import "./MyCalendar.css"
 
 const localizer = momentLocalizer(moment);
 
