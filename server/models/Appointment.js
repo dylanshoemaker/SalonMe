@@ -10,11 +10,7 @@ const appointmentSchema = new Schema({
   },
   
 },
-{
-  toJSON: {
-    getters: true
-  }
-});
+);
 
 
 // module.exports = mongoose.model('Appointment', appointmentSchema,'title');
